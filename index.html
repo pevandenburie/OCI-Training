@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>OCI - Package development Training</title>
+
+		<meta name="description" content="The OCI training">
+		<meta name="author" content="Paul-Emmanuel Vandenburie">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<style>
+		.soaelement {
+			#font-weight: bold;
+			color: DodgerBlue;
+		}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>O C I</h1>
+					<h3>Package development Training</h3>
+					<p>
+						<div><img src="img/cisco06.png" style="border:0"></div>
+					</p>
+				</section>
+
+
+				<!-- Plan of the training -->
+				<section>
+					<h2>Plan</h2>
+					<ol>
+						<li>OCI purpose</li>
+						<li>What is a Package</li>
+						<li>The OCI SDK</li>
+						<li>Public API overview</li>
+						<li>Create a WEB application</li>
+						<li>Create a Qt Package</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h2>OCI purpose</h2>
+					<ul>
+						<li>Multiprocess software architecture</li>
+						<li>DBUS based implementation</li>
+						<li>A central component: the CMAF (Cisco Multi-Application Framework)</li>
+						<li>3 types of elements: <span class="soaelement">User Interfaces</span>, <span class="soaelement">Services</span> and <span class="soaelement">Data Sources</span></li>
+						<li>Applications are packaged and declared using a <span class="soaelement">manifest</span></li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>What is a Package</h2>
+						<p>A file archive used to ship applications into the platform.<br>It contains:
+							<ul>
+							<li>A unique package identifier<br><i>(e.g. "com.cisco.vss.WelcomeMenu")</i></li>
+							<li>A mandatory <span class="soaelement">manifest</span></li>
+							<li>Optional icon, libraries, html/css/js files, resources, etc</li>
+							</ul>
+						</p>
+				</section>
+				
+				<section>
+					<h2>The OCI SDK</h2>
+					<ul>
+						<li>A cross-compilation toolchain</li>
+						<li>A customized IDE: <span class="soaelement">Eclipse</span></li>
+						<li>Supports <span class="soaelement">QtCreator, QtDesigner</span></li>
+						<li>Some command line tools</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Public API overview</h2>
+					<ul>
+						<li>The <span class="soaelement">User Interfaces</span> which provide the system visual element</li>
+						<li>The <span class="soaelement">Services</span> are background running tasks</li>
+						<li>The <span class="soaelement">Data Sources</span> whose jobs is to provide access the data available on the system</li>
+					</ul>
+					<p>Qt/C++ : UI, Service and Data Source</p>
+					<p>QML/HTML/JavaScript : UI</p>
+				</section>
+				
+				<section>
+					<img src="img/SoaPublicAPIs.png" alt="Public APIs overview" >
+				</section>
+				
+				<section>
+					<h2>Useful links</h2>
+					<p>Service Oriented Architecture<br> 
+						<a href="http://spvss-confluence.cisco.com/display/RCP/SOA+Product+Site">http://spvss-confluence.cisco.com/display/RCP/SOA+Product+Site</a></p>
+					<p>Public API<br>
+						<a href="http://nuxyocto4.fr.nds.com:9090/doc/doc/index.html">http://nuxyocto4.fr.nds.com:9090/doc/doc/index.html</a></p>
+					<p>Download IDE<br>
+						<a href="http://oci.cisco.com/products/tor/downloads/">http://oci.cisco.com/products/tor/downloads/</a></p>
+
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
