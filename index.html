@@ -59,52 +59,74 @@
 				<!-- Plan of the training -->
 				<section>
 					<h2>Plan</h2>
-					<small><ol>
+					<ol>
 						<li>OCI purpose</li>
 						<li>What is a Package</li>
 						<li>The OCI SDK</li>
 						<li>Public API overview</li>
-							<ol type="a">
-								<li>What is a UI</li>
-								<li>What is a Service</li>
-								<li>What is a DataSource</li>
-							</ol>
 						<li>Create a WEB application</li>
 						<li>Create a Qt Package</li>
-							<ol type="a">
-								<li>Create a Service</li>
-								<li>Create a Qt Widget UI</li>
-								<li>Create a DataSource</li>
-							</ol>
-					</ol></small>
+					</ol>
+				</section>
+				
+				<section>
+					<h2>OCI purpose</h2>
+					<ul>
+						<li>Multiprocess software architecture</li>
+						<li>DBUS based implementation</li>
+						<li>A central component: the CMAF (Cisco Multi-Application Framework)</li>
+						<li>3 types of elements: <span class="soaelement">User Interfaces</span>, <span class="soaelement">Services</span> and <span class="soaelement">Data Sources</span></li>
+						<li>Applications are packaged and declared using a <span class="soaelement">manifest</span></li>
+					</ul>
 				</section>
 				
 				<section>
 					<h2>What is a Package</h2>
-							<p>A file archive used to ship applications into the platform.<br>It contains:
-								<ul>
-								<li>A mandatory manifest.</li>
-								<li>Optional icon, libraries, html/css/js files, resources, etc.</li>
-								</ul>
-							</p>
+						<p>A file archive used to ship applications into the platform.<br>It contains:
+							<ul>
+							<li>A unique package identifier<br><i>(e.g. "com.cisco.vss.WelcomeMenu")</i></li>
+							<li>A mandatory <span class="soaelement">manifest</span></li>
+							<li>Optional icon, libraries, html/css/js files, resources, etc</li>
+							</ul>
+						</p>
+				</section>
+				
+				<section>
+					<h2>The OCI SDK</h2>
+					<ul>
+						<li>A cross-compilation toolchain</li>
+						<li>A customized IDE: <span class="soaelement">Eclipse</span></li>
+						<li>Supports <span class="soaelement">QtCreator, QtDesigner</span></li>
+						<li>Some command line tools</li>
+					</ul>
 				</section>
 				
 				<section>
 					<h2>Public API overview</h2>
 					<ul>
-					<li>The <span class="soaelement">User Interfaces</span> which provide the system visual element</li>
-					<li>The <span class="soaelement">Services</span> are background running tasks</li>
-					<li>The <span class="soaelement">Data Sources</span> whose jobs is to provide access the data available on the system</li>
+						<li>The <span class="soaelement">User Interfaces</span> which provide the system visual element</li>
+						<li>The <span class="soaelement">Services</span> are background running tasks</li>
+						<li>The <span class="soaelement">Data Sources</span> whose jobs is to provide access the data available on the system</li>
 					</ul>
 					<p>Qt/C++ : UI, Service and Data Source</p>
-					<p>HTML/JavaScript : Web UI</p>
+					<p>QML/HTML/JavaScript : UI</p>
 				</section>
 				
 				<section>
-					<!--<h2>Public API overview</h2>-->
 					<img src="img/SoaPublicAPIs.png" alt="Public APIs overview" >
 				</section>
+				
+				<section>
+					<h2>Useful links</h2>
+					<p>Service Oriented Architecture<br> 
+						<a href="http://spvss-confluence.cisco.com/display/RCP/SOA+Product+Site">http://spvss-confluence.cisco.com/display/RCP/SOA+Product+Site</a></p>
+					<p>Public API<br>
+						<a href="http://nuxyocto4.fr.nds.com:9090/doc/doc/index.html">http://nuxyocto4.fr.nds.com:9090/doc/doc/index.html</a></p>
+					<p>Download IDE<br>
+						<a href="http://oci.cisco.com/products/tor/downloads/">http://oci.cisco.com/products/tor/downloads/</a></p>
 
+				</section>
+				
 			</div>
 
 		</div>
